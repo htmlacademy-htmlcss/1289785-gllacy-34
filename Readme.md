@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
-* Студент: [Мария Панежина](https://up.htmlacademy.ru/htmlcss/34/user/1289785).
-* Наставник: `Неизвестно`.
+- Студент: [Мария Панежина](https://up.htmlacademy.ru/htmlcss/34/user/1289785).
+- Наставник: [Екатерина Комнатная](https://htmlacademy.ru/profile/id215761).
 
 ---
 
