@@ -37,17 +37,15 @@
   <main>
     <header>
       <h1 class="visually-hidden">Каталог</h1>
-      <ul>
-        <li>
-          <a href="index.html">Главная</a>
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link" href="index.html">Главная</a>
         </li>
-        <li>
-          <a>Каталог</a>
-        </li>
-        <li>
-          <a href="#">Сливочное</a>
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link">Каталог</a>
         </li>
       </ul>
+
       <h2>Сливочное мороженое</h2>
     </header>
 
@@ -104,15 +102,15 @@
             </li>
             <li>
               <label for="fruits">фрукты</label>
-              <input type="checkbox" id="fruits">
+              <input type="checkbox" name="fruits" id="fruits">
             </li>
             <li>
               <label for="syrups">сиропы</label>
-              <input type="checkbox" id="syrups" name="syrups">
+              <input type="checkbox" name="syrups" id="syrups">
             </li>
             <li>
               <label for="jams">джемы</label>
-              <input type="checkbox" id="jams" name="jams">
+              <input type="checkbox" name="jams" id="jams">
             </li>
           </ul>
         </fieldset>
@@ -302,20 +300,23 @@
   </main>
 
   <footer>
-    <ul class="social-list">
-      <li>
-        <a href="https://t.me/htmlacademy">
-          <img src="#" alt="Перейти в наш канал в Telegram">
+    <ul class="social-list-footer">
+      <li class="social-item">
+        <a class="social-button" href="https://t.me/htmlacademy"
+          aria-label="Переход на страницу магазина «Глейси» в Telegram">
+          <span class="visually-hidden">Telegram</span>
         </a>
       </li>
-      <li>
-        <a href="https://www.youtube.com/user/htmlacademyru">
-          <img src="#" alt="Перейти на наш канал на Ytube">
+      <li class="social-item">
+        <a class="social-button" href="https://www.youtube.com/user/htmlacademyru"
+          aria-label="Переход на страницу магазина «Глейси» в YouTube">
+          <span class="visually-hidden">YouTube</span>
         </a>
       </li>
-      <li>
-        <a href="https://vk.com/htmlacademy">
-          <img src="#" alt="Перейти на нашу страницу в Vkontakte">
+      <li class="social-item">
+        <a class="social-button" href="https://vk.com/htmlacademy"
+          aria-label="Переход на страницу магазина «Глейси» в Vkontakte">
+          <span class="visually-hidden">Vkontakte</span>
         </a>
       </li>
     </ul>
