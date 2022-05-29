@@ -25,8 +25,10 @@
 
       <div>
         <a href="tel:+78005558628">+7 800 555-86-28</a>
+        <button class="search-button">Поиск</button>
         <form action="https://echo.htmlacademy.ru/">
-          <input type="search" name="search">
+          <input type="search" name="search" id="search">
+          <label class="visually-hidden" for="search"></label>
         </form>
         <button type="button">Вход</button>
         <button type="button">2 товара</button>
@@ -44,22 +46,24 @@
           <p>Натуральное мороженое из свежих сливок
             и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
           <img src="#" alt="Мороженое с клубничным джемом, в вафельном рожке">
+          <a href="#">Заказать</a>
         </li>
         <li class="visually-hidden">
           <h3>Сливочное мороженое со вкусом банана</h3>
           <p>Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний
             день.</p>
           <img src="#" alt="Банановое мороженое, в вафельном рожке">
+          <a href="#">Заказать</a>
         </li>
         <li class="visually-hidden">
           <h3>Карамельный пломбир с маршмеллоу</h3>
           <p>Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех
             возрастов.</p>
           <img src="#" alt="Карамельное мороженое с маршмелой, украшеное мятой, в вафельном рожке">
+          <a href="#">Заказать</a>
         </li>
       </ul>
 
-      <button type="button">Заказать</button>
       <button type="button">
         <span class="visually-hidden">Вперед</span>
       </button>
@@ -85,20 +89,23 @@
         </li>
       </ol>
 
-      <ul>
-        <li>
-          <a href="https://t.me/htmlacademy">
-            <img src="#" alt="Перейти в наш канал в Telegram">
+      <ul class="social-list-main">
+        <li class="social-item">
+          <a class="social-button" href="https://t.me/htmlacademy"
+            aria-label="Переход на страницу магазина «Глейси» в Telegram">
+            <span class="visually-hidden">Telegram</span>
           </a>
         </li>
-        <li>
-          <a href="https://www.youtube.com/user/htmlacademyru">
-            <img src="#" alt="Перейти на наш канал на Ytube">
+        <li class="social-item">
+          <a class="social-button" href="https://www.youtube.com/user/htmlacademyru"
+            aria-label="Переход на страницу магазина «Глейси» в YouTube">
+            <span class="visually-hidden">YouTube</span>
           </a>
         </li>
-        <li>
-          <a href="https://vk.com/htmlacademy">
-            <img src="#" alt="Перейти на нашу страницу в Vkontakte">
+        <li class="social-item">
+          <a class="social-button" href="https://vk.com/htmlacademy"
+            aria-label="Переход на страницу магазина «Глейси» в Vkontakte">
+            <span class="visually-hidden">Vkontakte</span>
           </a>
         </li>
       </ul>
@@ -107,18 +114,18 @@
     <section>
       <h2>Заказывайте мороженое и получайте подарки!</h2>
 
-      <ul>
-        <li>
+      <ul class="sale-list">
+        <li class="sale-item">
           <h3>Малинка даром!</h3>
           <p>При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
           <img src="#" alt="Малина">
-          <button type="button">Хочу подарок</button>
+          <a href="#">Хочу подарок</a>
         </li>
-        <li>
-          <h3>Мvаршмеллоу даром!</h3>
+        <li class="sale-item">
+          <h3>Маршмеллоу даром!</h3>
           <p>При покупке 2 кг пломбира добавимв ваш заказ упаковку нежныхзефирок совершенно бесплатно.</p>
           <img src="#" alt="Маршмелоу">
-          <button type="button">Хочу подарок</button>
+          <a href="#">Хочу подарок</a>
         </li>
       </ul>
     </section>
@@ -216,7 +223,7 @@
         Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 
       <form action="https://echo.htmlacademy.ru/" method="post">
-        <label class="visually-hidden" for="subscriber-address"></label>
+        <label class="visually-hidden" for="subscriber-address">Поле для подписки на рассылку</label>
         <input type="email" id="subscriber-address" name="subscriber-address" placeholder="email@example.com" required>
         <button type="submit">Отправить</button>
       </form>
@@ -263,20 +270,23 @@
   </main>
 
   <footer>
-    <ul class="social-list">
-      <li>
-        <a href="https://t.me/htmlacademy">
-          <img src="#" alt="Перейти в наш канал в Telegram">
+    <ul class="social-list-footer">
+      <li class="social-item">
+        <a class="social-button" href="https://t.me/htmlacademy"
+          aria-label="Переход на страницу магазина «Глейси» в Telegram">
+          <span class="visually-hidden">Telegram</span>
         </a>
       </li>
-      <li>
-        <a href="https://www.youtube.com/user/htmlacademyru">
-          <img src="#" alt="Перейти на наш канал на Ytube">
+      <li class="social-item">
+        <a class="social-button" href="https://www.youtube.com/user/htmlacademyru"
+          aria-label="Переход на страницу магазина «Глейси» в YouTube">
+          <span class="visually-hidden">YouTube</span>
         </a>
       </li>
-      <li>
-        <a href="https://vk.com/htmlacademy">
-          <img src="#" alt="Перейти на нашу страницу в Vkontakte">
+      <li class="social-item">
+        <a class="social-button" href="https://vk.com/htmlacademy"
+          aria-label="Переход на страницу магазина «Глейси» в Vkontakte">
+          <span class="visually-hidden">Vkontakte</span>
         </a>
       </li>
     </ul>
