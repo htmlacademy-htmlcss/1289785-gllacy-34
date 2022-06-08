@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Магазин мороженного "Глейси": каталог</title>
+  <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
@@ -14,7 +15,7 @@
         <img class="img logo-img" src="images/icons/logo.svg" width="137" height="56" alt="Логотип магазина Глейси">
       </a>
 
-      <ul class="navigation-list">
+      <ul class="list navigation-list">
         <li class="navigation-item">
           <a class="link navigation-link" href="catalog.html">Каталог</a>
         </li>
@@ -42,20 +43,20 @@
   <main>
     <header class="inner-header">
       <h1 class="title main-title visually-hidden">Каталог</h1>
-      <ul class="breadcrumbs-list">
+      <ul class="list breadcrumbs-list">
         <li class="breadcrumbs-item">
           <a class="link breadcrumbs-link" href="index.html">Главная</a>
         </li>
         <li class="breadcrumbs-item">
-          <a class="link breadcrumbs-link">Каталог</a>
+          <a class="link breadcrumbs-link breadcrumbs-current-link">Каталог</a>
         </li>
       </ul>
 
-      <h2 class="title inner-header-title">Сливочное мороженое</h2>
+      <h2 class="title section-title inner-header-title">Сливочное мороженое</h2>
     </header>
 
     <section class="catalog-products">
-      <h2 class="title catalog-products-title visually-hidden">Список товаров с фильтрами</h2>
+      <h2 class="title section-title catalog-products-title visually-hidden">Список товаров с фильтрами</h2>
 
       <form class="form catalog-products-form" action="https://echo.htmlacademy.ru/" method="get">
         <fieldset class="catalog-sort-group">
@@ -74,7 +75,7 @@
 
         <fieldset class="catalog-filter-group">
           <legend class="legend catalog-filter-title">Жирность:</legend>
-          <ul class="catalog-filter-list">
+          <ul class="list catalog-filter-list">
             <li class="catalog-filter-item">
               <label class="lable control" for="zero">0%</label>
               <input class="input control-input" type="radio" id="zero" value="zero" name="fat">
@@ -96,7 +97,7 @@
 
         <fieldset class="catalog-filter-group">
           <legend class="legend catalog-filter-title">Наполнители:</legend>
-          <ul class="catalog-filter-list">
+          <ul class="list catalog-filter-list">
             <li class="catalog-filter-item">
               <label class="lable control" for="chocolate">шоколадные</label>
               <input class="input control-input" type="checkbox" id="chocolate" name="chocolate" checked>
@@ -123,7 +124,7 @@
         <button class="button submit-button catalog-filter-button" type="submit">Применить</button>
       </form>
 
-      <ul class="product-list">
+      <ul class="list product-list">
         <li class="product-card">
           <a class="link product-card-link" href="#">
             <h3 class="title product-card-title">Малинка</h3>
@@ -132,7 +133,9 @@
           </a>
           <div class="order">
             <b class="order-price">310 ₽/кг</b>
-            <a class="link button add-to-car-button" href="#">Добавить в корзину</a>
+            <a class="link button add-to-car-button" href="#">
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
           </div>
         </li>
 
@@ -144,7 +147,9 @@
           </a>
           <div class="order">
             <b class="order-price">340 ₽/кг</b>
-            <a class="link button add-to-car-button" href="#">Добавить в корзину</a>
+            <a class="link button add-to-car-button" href="#">
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
           </div>
         </li>
 
@@ -156,7 +161,9 @@
           </a>
           <div class="order">
             <b class="order-price">330 ₽/кг</b>
-            <a class="link button add-to-car-button" href="#">Добавить в корзину</a>
+            <a class="link button add-to-car-button" href="#">
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
           </div>
         </li>
 
@@ -168,7 +175,9 @@
           </a>
           <div class="order">
             <b class="order-price">320 ₽/кг</b>
-            <a class="link button add-to-car-button" href="#">Добавить в корзину</a>
+            <a class="link button add-to-car-button" href="#">
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
           </div>
         </li>
 
@@ -180,7 +189,9 @@
           </a>
           <div class="order">
             <b class="order-price">330 ₽/кг</b>
-            <a class="link button add-to-car-button" href="#">Добавить в корзину</a>
+            <a class="link button add-to-car-button" href="#">
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
           </div>
         </li>
 
@@ -193,7 +204,9 @@
 
           <div class="order">
             <b class="order-price">340 ₽/кг</b>
-            <a class="link button add-to-car-button" href="#">Добавить в корзину</a>
+            <a class="link button add-to-car-button" href="#">
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
           </div>
         </li>
 
@@ -205,7 +218,9 @@
           </a>
           <div class="order">
             <b class="order-price">270 ₽/кг</b>
-            <a class="link button add-to-car-button" href="#">Добавить в корзину</a>
+            <a class="link button add-to-car-button" href="#">
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
           </div>
         </li>
 
@@ -217,7 +232,9 @@
           </a>
           <div class="order">
             <b class="order-price">300 ₽/кг</b>
-            <a class="link button add-to-car-button" href="#">Добавить в корзину</a>
+            <a class="link button add-to-car-button" href="#">
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
           </div>
         </li>
 
@@ -229,7 +246,9 @@
           </a>
           <div class="order">
             <b class="order-price">310 ₽/кг</b>
-            <a class="link button add-to-car-button" href="#">Добавить в корзину</a>
+            <a class="link button add-to-car-button" href="#">
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
           </div>
         </li>
 
@@ -241,7 +260,9 @@
           </a>
           <div class="order">
             <b class="order-price">320 ₽/кг</b>
-            <a class="link button add-to-car-button" href="#">Добавить в корзину</a>
+            <a class="link button add-to-car-button" href="#">
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
           </div>
         </li>
 
@@ -253,7 +274,9 @@
           </a>
           <div class="order">
             <b class="order-price">360 ₽/кг</b>
-            <a class="link button add-to-car-button" href="#">Добавить в корзину</a>
+            <a class="link button add-to-car-button" href="#">
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
           </div>
         </li>
 
@@ -265,7 +288,9 @@
           </a>
           <div class="order">
             <b class="order-price">280 ₽/кг</b>
-            <a class="link button add-to-car-button" href="#">Добавить в корзину</a>
+            <a class="link button add-to-car-button" href="#">
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
           </div>
         </li>
       </ul>
@@ -274,7 +299,7 @@
     <section class="catolog-list-controls">
       <button class="button regular-button" type="button">Показать еще</button>
 
-      <ul class="catalog-list-pagination">
+      <ul class="list catalog-list-pagination">
         <li class="pagination-item">
           <a class="link pagination-link pagination-prev pagination-disabled">
             <span class="visually-hidden">Предыдущая страница</span>
@@ -305,7 +330,7 @@
   </main>
 
   <footer class="page-footer">
-    <ul class="social-list-footer">
+    <ul class="list social-list-footer">
       <li class="social-item">
         <a class="link social-link" href="https://t.me/htmlacademy"
           aria-label="Переход на страницу магазина «Глейси» в Telegram">
@@ -326,7 +351,7 @@
       </li>
     </ul>
 
-    <ul class="footer-navigation-list">
+    <ul class="list footer-navigation-list">
       <li class="footer-navigation-item">
         <a class="link footer-navigation-link footer-spetial-link" href="#">Для поставщиков</a>
       </li>
