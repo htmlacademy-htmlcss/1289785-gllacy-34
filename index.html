@@ -13,7 +13,7 @@
   <header class="page-header">
     <nav class="site-navigation">
       <ul class="list navigation-list">
-        <li class="navigation-item">
+        <li class="navigation-item logo-navigation-item">
           <a class="link logo-link" href="#">
             <img class="img logo-img" src="images/icons/logo.svg" width="137" height="56" alt="Логотип магазина Глейси">
           </a>
@@ -30,16 +30,16 @@
       </ul>
 
       <div class="user-navigation">
-        <a class="link phone-link" href="tel:+78005558628">+7 800 555-86-28</a>
-        <button class="user-nav-button search-button">
+        <a class="link user-navigation-item phone-link" href="tel:+78005558628">+7 800 555-86-28</a>
+        <button class="button user-nav-button search-button user-navigation-item">
           <span class="visually-hidden">Поиск</span>
         </button>
         <form class="form search-form" action="https://echo.htmlacademy.ru/">
           <input class="input search-input" type="search" name="search" id="search">
           <label class="visually-hidden" for="search">Поиск</label>
         </form>
-        <button class="user-nav-button login-button" type="button">Вход</button>
-        <button class="user-nav-button car-button" type="button">2 товара</button>
+        <button class="button user-nav-button login-button user-navigation-item" type="button">Вход</button>
+        <button class="button user-nav-button car-button user-navigation-item" type="button">2 товара</button>
       </div>
     </nav>
   </header>
@@ -137,14 +137,14 @@
             <p class="pharagraph sale-pharagraph">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ
               банку
               малинового варенья бесплатно.</p>
-            <img class="img sale-img" src="#" alt="Малина">
+            <img class="img sale-img visually-hidden" src="#" alt="Малина">
             <a class="link button sale-button regular-button" href="#">Хочу подарок</a>
           </li>
           <li class="spetial-offer-item">
             <h3 class="title sale-title">Маршмеллоу даром!</h3>
             <p class="pharagraph sale-pharagraph">При покупке 2 кг пломбира добавимв ваш заказ упаковку нежныхзефирок
               совершенно бесплатно.</p>
-            <img class="img sale-img" src="#" alt="Маршмелоу">
+            <img class="img sale-img visually-hidden" src="#" alt="Маршмелоу">
             <a class="link button sale-button regular-button" href="#">Хочу подарок</a>
           </li>
         </ul>
@@ -154,7 +154,7 @@
         <h2 class="title section-title hits-title">Попробуйте самые популярные вкусы нашего мороженого</h2>
 
         <ul class="list product-list popular-product-list">
-          <li class="product-card">
+          <li class="product-card hit-product-card">
             <a class="link product-card-link" href="#">
               <h3 class="title product-card-title">Малинка</h3>
               <p class="pharagraph product-card-pharagraph">Сливочное мороженое с малиновым джемом</p>
@@ -168,7 +168,7 @@
             </div>
           </li>
 
-          <li class="product-card">
+          <li class="product-card hit-product-card">
             <a class="link product-card-link" href="#">
               <h3 class="title product-card-title">Фисташка</h3>
               <p class="pharagraph product-card-pharagraph">Фисташковый пломбир с кусочками шоколада</p>
@@ -182,7 +182,7 @@
             </div>
           </li>
 
-          <li class="product-card">
+          <li class="product-card hit-product-card">
             <a class="link product-card-link" href="#">
               <h3 class="title product-card-title">Черника</h3>
               <p class="pharagraph product-card-pharagraph">Крем-брюле с черничным джемом</p>
@@ -196,7 +196,7 @@
             </div>
           </li>
 
-          <li class="product-card">
+          <li class="product-card hit-product-card">
             <a class="link product-card-link" href="#">
               <h3 class="title product-card-title">Бабл-гам</h3>
               <p class="pharagraph product-card-pharagraph">Ванильный пломбир со сладкой посыпкой</p>
@@ -227,16 +227,15 @@
                 проверенных временем технологий.</p>
             </li>
             <li class="about-item">
+              <p class="pharagraph about-list-pharagraph">Закупка ингредиентов производится только у проверенных
+                фермерских хозяйств, с которыми нас связывает долговременное сотрудничество.</p>
+            </li>
+            <li class="about-item">
               <p class="pharagraph about-list-pharagraph">Для приготовления мороженого используются сливки и молоко
                 высочайшего качества. Все ингредиенты и добавки
                 произведены из натурального сырья.</p>
             </li>
-            <li class="about-item">
-              <p class="pharagraph about-list-pharagraph">Закупка ингредиентов производится только у проверенных
-                фермерских
-                хозяйств, с которыми нас связывает
-                долговременное сотрудничество.</p>
-            </li>
+
             <li class="about-item">
               <p class="pharagraph about-list-pharagraph">Доставка нашего мороженого осуществляется в специальном
                 термопаке,
@@ -252,7 +251,7 @@
           <h2 class="title section-title useful-information-title visually-hidden">Полезные статьи</h2>
 
           <a class="link useful-information-link" href="#">
-            <span class="new-information">Новое в нашем блоге</span>
+            <span class="new-information-span">Новое в нашем блоге</span>
             <h3 class="title useful-information-title">10 способов сервировки фруктовых щербетов к столу</h3>
           </a>
         </article>
@@ -278,9 +277,11 @@
 
 
       <section class="delivery">
-        <h2 class="title section-title delivery-title">Доставка любимого мороженого на дом</h2>
-        <p class="pharagraph delivery-pharagraph">Хочется полакомиться любимым дессертом, но нет времени съездить в
-          магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
+        <div class="delivery-description-container">
+          <h2 class="title section-title delivery-title">Доставка любимого <br> мороженого на дом</h2>
+          <p class="pharagraph delivery-pharagraph">Хочется полакомиться любимым дессертом, но нет времени съездить в
+            магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
+        </div>
 
         <form class="form delivery-form" action="https://echo.htmlacademy.ru/" method="post">
           <p class="pharagraph delivery-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения
@@ -369,7 +370,7 @@
         <img class="img copyright-img" src="images/icons/logo-htmlacademy.svg" width="93" height="27"
           alt="Перейти на сайт htmlacademy">
       </a>
-      <p class="pharagraph copyright-pharagraph">Сделано в <a class="link copyright-link"
+      <p class="pharagraph copyright-pharagraph">Сделано в <a class="link copyright-owner-link"
           href="https://htmlacademy.ru/">.html academy</a> © 2021</p>
     </div>
   </footer>
