@@ -275,7 +275,6 @@
         </div>
       </div>
 
-
       <section class="delivery">
         <div class="delivery-description-container">
           <h2 class="title section-title delivery-title">Доставка любимого <br> мороженого на дом</h2>
@@ -283,27 +282,38 @@
             магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
         </div>
 
-        <form class="form delivery-form" action="https://echo.htmlacademy.ru/" method="post">
-          <p class="pharagraph delivery-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения
+        <div class="delivery-form-container">
+          <p class="pharagraph delivery-form-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения
             брони.
           </p>
-          <p class="pharagraph delivery-pharagraph">
-            <label class="label delevery-label delivery-date-label" for="date">Дата</label>
-            <input class="input delivery-date-input" type="date" name="delivery-date" id="date" value="2020-04-01"
-              required>
-          </p>
-          <p class="pharagraph delivery-pharagraph">
-            <label class="label delevery-label delivery-phone-label" for="phone">Телефон</label>
-            <input class="input delivery-phon-input" type="tel" name="delivery-phone" id="phone"
-              placeholder="+7 800 999-00-00" required>
-          </p>
-          <p class="pharagraph delivery-pharagraph">
-            <label class="label delevery-label delivery-address-label" for="address">Адрес</label>
-            <input class="input delivery-address-input" type="text" name="delivery-address" id="address"
-              placeholder="ул. Большая Конюшенная, 19/8" required>
-          </p>
-          <button class="button submit-button delivery-button special-index-button" type="submit">Отправить</button>
-        </form>
+          <form class="form delivery-form" action="https://echo.htmlacademy.ru/" method="post">
+            <p class="pharagraph delivery-pharagraph delivery-form-date">
+              <label class="label delivery-label delivery-date-label" for="date">Дата
+                <button class="info">
+                  <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                </button>
+              </label>
+              <input class="input delivery-input delivery-date-input" type="text" name="delivery-date" id="date"
+                placeholder="01.04.2020" required>
+            </p>
+            <p class="pharagraph delivery-pharagraph delivery-form-phone">
+              <label class="label delivery-label delivery-phone-label" for="phone">Телефон</label>
+              <input class="input delivery-input delivery-phone-input" type="tel" name="delivery-phone" id="phone"
+                placeholder="+7 800 999-00-00" required>
+            </p>
+            <p class="pharagraph delivery-pharagraph delivery-form-address">
+              <label class="label delivery-label delivery-address-label" for="address">Адрес
+                <button class="info">
+                  <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                </button>
+              </label>
+              <input class="input delivery-input delivery-address-input" type="text" name="delivery-address"
+                id="address" placeholder="ул. Большая Конюшенная, 19/8" required>
+            </p>
+            <button class="button submit-button delivery-button special-index-button" type="submit">Отправить</button>
+          </form>
+        </div>
+
       </section>
 
       <div class="contacts-wrapper">
