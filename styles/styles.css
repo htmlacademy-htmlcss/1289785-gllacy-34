@@ -14,6 +14,7 @@
   --regular-button-bg-hover: rgba(252, 252, 252, 0.4);
   --pink-button-bg-active: #FEAFC3;
   --special-index-button-border: rgba(255, 47, 100, 0.3);
+  --box-shadow-gra-tarnsparent: rgba(185, 185, 185, 0.3);
 
   --extra-bright-pink: #FF2F64;
   --bright-pink: #FF4A78;
@@ -106,15 +107,15 @@ body {
 }
 
 body.slider-body-1 {
-  background-color: var(--pink-background);
+  background: var(--pink-background);
 }
 
 body.slider-body-2 {
-  background-color: var(--blue-background);
+  background: var(--blue-background);
 }
 
 body.slider-body-3 {
-  background-color: var(--yellow-background);
+  background: var(--yellow-background);
 }
 
 .pharagraph {
@@ -164,46 +165,62 @@ body.slider-body-3 {
 
 .regular-button {
   color: var(--extra-dark-gray);
-  background-color: var(--extra-light-white);
+  background: var(--extra-light-white);
   box-shadow: 0 0 0 4px var(--regular-button-shadow);
 }
 
 .regular-button:hover {
-  background-color: var(--regular-button-bg-hover);
+  background: var(--regular-button-bg-hover);
   box-shadow: 0 0 0 4px var(--extra-light-white);
 }
 
 .regular-button:active {
   box-shadow: 0 0 0 2px var(--extra-dark-gray);
-  background-color: var(--extra-light-white);
+  background: var(--extra-light-white);
 }
 
 .regular-button:focus {
   box-shadow: 0 0 0 2px var(--extra-dark-gray);
-  background-color: var(--extra-light-white-hover);
+  background: var(--extra-light-white-hover);
+}
+
+/* Класс для заблокированного состояния кнопки */
+.regular-button.disabled {
+  color: var(--extra-dark-gray);
+  background: var(--extra-light-white);
+  box-shadow: 0 0 0 4px var(--regular-button-shadow);
+  opacity: 0.4;
 }
 
 .special-index-button {
   color: var(--extra-light-white);
-  background-color: var(--extra-bright-pink);
+  background: var(--extra-bright-pink);
   box-shadow: 0 0 0 4px var(--special-index-button-border);
 }
 
 .special-index-button:hover {
-  background-color: var(--button-transparent-white-bg);
+  background: var(--button-transparent-white-bg);
   box-shadow: 0 0 0 4px var(--extra-bright-pink);
   color: var(--extra-dark-gray);
 }
 
 .special-index-button:active {
   box-shadow: 0 0 0 2px var(--extra-dark-gray);
-  background-color: var(--pink-button-bg-active);
+  background: var(--pink-button-bg-active);
 }
 
 .special-index-button:focus {
   box-shadow: 0 0 0 2px var(--extra-dark-gray);
   background-color: var(--extra-bright-pink);
   color: var(--extra-light-white);
+}
+
+/* Класс для заблокированного состояния кнопки */
+.special-index-button.disabled {
+  box-shadow: 0 0 0 2px var(--box-shadow-gra-tarnsparent);
+  background: var(--neutral-gray);
+  color: var(--dark-gray);
+  opacity: 0.3;
 }
 
 .catalog-filter-button {
@@ -232,7 +249,14 @@ body.slider-body-3 {
 
 .catalog-filter-button:focus {
   box-shadow: 0 0 0 2px var(--extra-dark-gray);
-  background-color: var(--extra-light-white-hover);
+  background: var(--extra-light-white-hover);
+}
+
+.catalog-filter-button.disabled {
+  color: var(--extra-dark-gray);
+  background: var(--button-transparent-white-bg);
+  box-shadow: 0 0 0 2px var(--white);
+  opacity: 0.3;
 }
 
 .user-nav-button {
@@ -251,20 +275,20 @@ body.slider-body-3 {
 .user-nav-button.active {
   fill: var(--extra-light-white);
   color: var(--extra-light-white);
-  background-color: var(--extra-bright-pink);
+  background: var(--extra-bright-pink);
 }
 
 .user-nav-button:hover {
   fill: var(--extra-dark-gray);
   color: var(--extra-dark-gray);
-  background-color: var(--extra-light-white-hover);
+  background: var(--extra-light-white-hover);
 }
 
 .user-nav-button:focus {
   fill: var(--extra-dark-gray);
   color: var(--extra-dark-gray);
   border: 2px solid var(--black);
-  background-color: var(--extra-light-white-hover);
+  background: var(--extra-light-white-hover);
 }
 
 .search-button {
@@ -425,25 +449,25 @@ body.slider-body-3 {
 .navigation-link.active {
   border-radius: 30px;
   color: var(--extra-light-white);
-  background-color: var(--extra-bright-pink);
+  background: var(--extra-bright-pink);
 }
 
 .navigation-link:not(.logo-link):hover {
   border-radius: 30px;
-  background-color: var(--extra-light-white-hover);
+  background: var(--extra-light-white-hover);
   color: var(--extra-dark-gray);
 }
 
 .navigation-link:not(.logo-link):active {
   border-radius: 30px;
   border: 2px solid var(--white);
-  background-color: var(--white);
+  background: var(--white);
 }
 
 .navigation-link:focus {
   border-radius: 30px;
   border: 2px solid var(--extra-dark-gray);
-  background-color: var(--extra-light-white-hover);
+  background: var(--extra-light-white-hover);
 }
 
 .navigation-link {
@@ -622,7 +646,7 @@ opacity: 0.4;
   height: 12px;
 
   background: var(--button-transparent-white-bg);
-  border-radius: 100px;
+  border-radius: 100%;
   border: 1px solid transparent;
 
   cursor: pointer;
@@ -645,6 +669,20 @@ opacity: 0.4;
   background: var(--extra-light-white);
 }
 
+/* Класс для состояния выбранного слайда */
+.slider-pagination-button-current {
+  border: 1px solid transparent;
+
+  background: var(--extra-light-white);
+}
+
+/* Класс для заблокированного состояния */
+.slider-pagination-button.disabled {
+  border: 1px solid var(--extra-dark-gray);
+
+  background: var(--button-transparent-white-bg);
+}
+
 .slider-buttons-container {
   position: absolute;
 
@@ -660,7 +698,7 @@ opacity: 0.4;
   border-radius: 26px;
 
   fill: var(--extra-light-white);
-  background-color: var(--button-transparent-white-bg);
+  background: var(--button-transparent-white-bg);
 
   width: 38px;
   height: 38px;
@@ -669,20 +707,28 @@ opacity: 0.4;
 }
 
 .slider-button:hover {
-  background-color: var(--extra-light-white);
+  background: var(--extra-light-white);
   fill: var(--extra-dark-gray);
 }
 
 .slider-button:active {
   border: 2px solid transparent;
-  background-color: var(--extra-light-white-hover);
+  background: var(--extra-light-white-hover);
   fill: var(--extra-dark-gray);
 }
 
 .slider-button:focus {
   border: 2px solid var(--extra-dark-gray);
-  background-color: var(--button-transparent-white-bg);
+  background: var(--button-transparent-white-bg);
   fill: var(--extra-dark-gray);
+}
+
+/* Класс для заблокированного состояния кнопки */
+.slider-button.disabled {
+  background: var(--button-transparent-white-bg);
+  border: 2px solid var(--extra-light-white);
+  fill: var(--extra-light-white);
+  opacity: 0.3;
 }
 
 .slider-button-previous {
@@ -719,7 +765,7 @@ opacity: 0.4;
   border-radius: 16px;
 
   color: var(--extra-dark-gray);
-  background-color: var(--neutral-pink);
+  background: var(--neutral-pink);
 }
 
 .spetial-offer-raspberry {
@@ -822,7 +868,7 @@ opacity: 0.4;
 
   border-radius: 8px;
 
-  background-color: var(--extra-light-white);
+  background: var(--extra-light-white);
 }
 
 .product-card-link {
@@ -872,21 +918,27 @@ opacity: 0.4;
 }
 
 .add-to-car-button:hover {
-  background-color: var(--white);
+  background: var(--white);
   border: 2px solid var(--extra-bright-pink);
   fill: var(--extra-dark-gray);
 }
 
 .add-to-car-button:active {
-  background-color: var(--extra-light-pink);
+  background: var(--extra-light-pink);
   border: 2px solid var(--extra-bright-pink);
   fill: var(--extra-dark-gray);
 }
 
 .add-to-car-button:focus {
-  background-color: var(--extra-bright-pink);
+  background: var(--extra-bright-pink);
   border: 2px solid var(--extra-dark-gray);
   fill: var(--white);
+}
+
+.add-to-car-button.disabled {
+  background: var(--neutral-gray);
+  border: 2px solid var(--neutral-gray);
+  fill: var(--dark-gray);
 }
 
 .add-to-car-icon {
@@ -937,7 +989,7 @@ opacity: 0.4;
 
   border-radius: 16px;
 
-  background-color: var(--white);
+  background: var(--white);
 }
 
 .about-list {
@@ -1010,7 +1062,7 @@ opacity: 0.4;
 
   border-radius: 16px;
 
-  background-color: var(--white);
+  background: var(--white);
 }
 
 .subscription-pharagraph {
@@ -1043,7 +1095,33 @@ opacity: 0.4;
 }
 
 .subscription-input:focus {
-  border: 2px solid var(--extra-dark-gray);
+  border: 1px solid var(--extra-dark-gray);
+  box-shadow: 0 0 0 1px var(--extra-dark-gray);
+}
+
+/* Класс для при идентификации ошибки валидации */
+.subscription-input.validation-error {
+  border: 1px solid var(--error);
+}
+
+.subscription-input.validation-error:hover {
+  border: 1px solid var(--error);
+  box-shadow: 0 0 0 1px var(--error);
+}
+
+/* Класс для блокировки поля по умолчанию */
+.subscription-input.disabled {
+  background: var(--light-gray);
+  border: 1px solid var(--neutral-gray);
+  box-shadow: none;
+  opacity: 0.65;
+}
+
+/* Класс для временной блокировки поля */
+.subscription-input.disabled-temporarily {
+  background: var(--light-gray);
+  border: 1px solid var(--neutral-gray);
+  box-shadow: none;
 }
 
 /* Delivery */
@@ -1077,7 +1155,7 @@ opacity: 0.4;
 
   border-radius: 8px;
 
-  background-color: var(--extra-light-white);
+  background: var(--extra-light-white);
 }
 
 .delivery-form-info {
@@ -1131,7 +1209,33 @@ opacity: 0.4;
 }
 
 .delivery-input:focus {
-  border: 2px solid var(--extra-dark-gray);
+  border: 1px solid var(--extra-dark-gray);
+  box-shadow: 0 0 0 1px var(--extra-dark-gray);
+}
+
+/* Класс для при идентификации ошибки валидации */
+.delivery-input.validation-error {
+  border: 1px solid var(--error);
+}
+
+.delivery-input.validation-error:hover {
+  border: 1px solid var(--error);
+  box-shadow: 0 0 0 1px var(--error);
+}
+
+/* Класс для блокировки поля по умолчанию */
+.delivery-input.disabled {
+  background: var(--light-gray);
+  border: 1px solid var(--neutral-gray);
+  box-shadow: none;
+  opacity: 0.65;
+}
+
+/* Класс для временной блокировки поля */
+.delivery-input.disabled-temporarily {
+  background: var(--light-gray);
+  border: 1px solid var(--neutral-gray);
+  box-shadow: none;
 }
 
 .delivery-info-button {
@@ -1192,7 +1296,7 @@ opacity: 0.4;
 
   border-radius: 8px;
 
-  background-color: var(--extra-light-white);
+  background: var(--extra-light-white);
 }
 
 .contacts-info {
@@ -1262,7 +1366,7 @@ opacity: 0.4;
 .pagination-link-number {
   display: block;
 
-  padding: 2px 7px;
+  padding: 1px;
 
   width: 24px;
   height: 24px;
@@ -1352,28 +1456,28 @@ opacity: 0.4;
 .social-link {
   display: block;
 
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
 
   border-radius: 50px;
-  box-shadow: 0 0 0 2px var(--button-transparent-white-bg);
+  box-shadow: 0 0 0 4px var(--button-transparent-white-bg);
 }
 
 .social-link:hover {
   background: var(--extra-dark-gray);
-  box-shadow: 0 0 0 2px var(--extra-light-white-hover);
+  box-shadow: 0 0 0 4px var(--extra-light-white-hover);
 }
 
 .social-link:active {
   opacity: 0.5;
 
   background: var(--extra-dark-gray);
-  box-shadow: 0 0 0 2px var(--extra-light-white-hover);
+  box-shadow: 0 0 0 4px var(--extra-light-white-hover);
 }
 
 .social-link:focus {
   background: var(--extra-dark-gray);
-  box-shadow: 0 0 0 2px var(--extra-dark-gray);
+  box-shadow: 0 0 0 4px var(--extra-dark-gray);
 }
 
 .social-link-tg,
@@ -1383,10 +1487,9 @@ opacity: 0.4;
 }
 
 .social-icon {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
   margin: auto;
   fill: var(--white);
 }
