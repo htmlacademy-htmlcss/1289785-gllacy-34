@@ -152,35 +152,27 @@ body {
   cursor: pointer;
 }
 
-.regular-button {
-  color: var(--extra-dark-gray);
-  background: var(--extra-light-white);
-  box-shadow: 0 0 0 4px var(--regular-button-shadow);
-}
-
-/* Класс для состояния ожидания */
-/* .regular-button.loading,
+.regular-button,
 .regular-button.loading:hover,
 .regular-button.loading:active,
 .regular-button.loading:focus {
   color: var(--extra-dark-gray);
   background: var(--extra-light-white);
   box-shadow: 0 0 0 4px var(--regular-button-shadow);
-  padding-right: 53px;
-  background-image: url("../images/icons/spinner-dark.svg");
-  background-repeat: no-repeat;
-  background-position: center right 15%;
-} */
+}
 
+/* Класс для состояния ожидания */
 .regular-button.loading::after {
   content: "";
-    position: absolute;
-    height: 16px;
-    width: 16px;
-    background-position: center left 8px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url("../images/icons/spinner-dark.svg");
+  height: 16px;
+  width: 16px;
+  background-position: center;
+  vertical-align: baseline;
+  display: inline-block;
+  margin-left: 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../images/icons/spinner-dark.svg");
   }
 
 .regular-button:hover {
@@ -206,31 +198,24 @@ body {
   opacity: 0.4;
 }
 
-.special-index-button {
-  color: var(--extra-light-white);
-  background: var(--extra-bright-pink);
-  box-shadow: 0 0 0 4px var(--special-index-button-border);
-}
-
-/* Класс для состояния ожидания */
-/* .special-index-button.loading,
+.special-index-button,
 .special-index-button.loading:hover,
 .special-index-button.loading:active,
 .special-index-button.loading:focus {
   color: var(--extra-light-white);
   background: var(--extra-bright-pink);
   box-shadow: 0 0 0 4px var(--special-index-button-border);
-  background-image: url("../images/icons/spinner-light.svg");
-  background-repeat: no-repeat;
-  background-position: center right 15%;
-} */
+}
 
+/* Класс для состояния ожидания */
 .special-index-button.loading::after {
   content: "";
-  position: absolute;
   height: 16px;
   width: 16px;
-  background-position: center left 8px;
+  background-position: center;
+  vertical-align: baseline;
+  display: inline-block;
+  margin-left: 8px;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("../images/icons/spinner-light.svg");
@@ -394,7 +379,7 @@ body {
   color: var(--extra-dark-gray);
 }
 
-.spetial-offer-title {
+.special-offer-title {
   margin-bottom: 55px;
 
   text-align: center;
@@ -831,19 +816,19 @@ opacity: 0.4;
   fill: inherit;
 }
 
-/* Spetial-offer */
+/* special-offer */
 
-.spetial-offer {
+.special-offer {
   margin-bottom: 81px;
 }
 
-.spetial-offer-list {
+.special-offer-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.spetial-offer-item {
+.special-offer-item {
   width: 570px;
   padding: 36px;
 
@@ -853,14 +838,14 @@ opacity: 0.4;
   background: var(--neutral-pink);
 }
 
-.spetial-offer-raspberry {
+.special-offer-raspberry {
   background-image: url("../images/sale/raspberry.png");
   background-repeat: no-repeat;
   background-size: 219px 268px;
   background-position: right;
 }
 
-.spetial-offer-marshmallow {
+.special-offer-marshmallow {
   background-image: url("../images/sale/marshmallow.png");
   background-repeat: no-repeat;
   background-size: 219px 268px;
@@ -1171,7 +1156,7 @@ opacity: 0.4;
 
 .subscription-container {
   padding: 6px;
-  width: 570px;
+  max-width: 574px;
   min-height: 224px;
 
   border-radius: 16px;
@@ -1248,6 +1233,10 @@ opacity: 0.4;
   background: var(--light-gray);
   border: 1px solid var(--neutral-gray);
   box-shadow: none;
+}
+
+.subscription-button {
+  align-self: center;
 }
 
 /* Delivery */
@@ -1415,7 +1404,7 @@ opacity: 0.4;
 }
 
 .contacts {
-  width: 343px;
+  max-width: 377px;
   padding: 40px;
   padding-right: 53px;
   margin-right: auto;
@@ -1632,15 +1621,15 @@ opacity: 0.4;
   padding-left: 24px;
 }
 
-.navigation-item-spetial {
+.navigation-item-special {
   position: relative;
 }
 
-.footer-spetial-link {
+.footer-special-link {
   font-weight: 700;
 }
 
-.footer-spetial-link::before {
+.footer-special-link::before {
   position: absolute;
   content: "";
   top: 2px;
