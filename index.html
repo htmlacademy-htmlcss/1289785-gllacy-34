@@ -19,7 +19,7 @@
           </a>
         </li>
         <li class="navigation-item">
-          <a class="link navigation-link" href="catalog.html">Каталог</a>
+          <a class="link navigation-link catalog-link" href="catalog.html">Каталог</a>
         </li>
         <li class="navigation-item">
           <a class="link navigation-link" href="#">Доставка и оплата</a>
@@ -37,13 +37,16 @@
             <path fill-rule="evenodd" clip-rule="evenodd"
               d="M1.66329 6.18799C1.66329 3.61066 3.75263 1.52132 6.32996 1.52132C8.90729 1.52132 10.9966 3.61066 10.9966 6.18799C10.9966 7.44526 10.4994 8.58641 9.69093 9.42554C9.66808 9.44309 9.64612 9.46234 9.62519 9.48326C9.60427 9.50418 9.58503 9.52614 9.56748 9.54898C8.72835 10.3575 7.58722 10.8547 6.32996 10.8547C3.75263 10.8547 1.66329 8.76532 1.66329 6.18799ZM10.0751 10.8759C9.04862 11.697 7.74662 12.188 6.32996 12.188C3.01625 12.188 0.329956 9.5017 0.329956 6.18799C0.329956 2.87428 3.01625 0.187988 6.32996 0.187988C9.64367 0.187988 12.33 2.87428 12.33 6.18799C12.33 7.60467 11.839 8.90668 11.0179 9.93313L13.468 12.3833C13.7284 12.6436 13.7284 13.0657 13.468 13.3261C13.2077 13.5864 12.7855 13.5864 12.5252 13.3261L10.0751 10.8759Z" />
           </svg>
-          <span class="visually-hidden">Поиск</span>
+          <!-- <span class="visually-hidden">Поиск</span> -->
         </button>
-        <form class="form search-form" action="https://echo.htmlacademy.ru/">
-          <input class="input search-input" type="search" name="search" id="search">
-          <label class="visually-hidden" for="search">Поиск</label>
-        </form>
-        <button class="button user-nav-button login-button user-navigation-item" type="button">
+        <div class="search-form-container">
+          <form class="form search-form" action="https://echo.htmlacademy.ru/">
+            <input class="input search-input" type="search" name="search" id="search" placeholder="Поиск по сайту">
+            <label class="visually-hidden" for="search">Поиск</label>
+          </form>
+        </div>
+
+        <button class="button user-nav-button signin-button user-navigation-item" type="button">
           <svg class="user-navigation-icon" aria-hidden="true" focusable="false" width="16" height="16"
             viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -51,7 +54,32 @@
           </svg>
           Вход
         </button>
+        <div class="popover popover-signin">
+          <div class="popover-content">
+            <h2 class="title popover-title signin-title">Личный кабинет</h2>
+            <form class="form" action="https://echo.htmlacademy.ru/">
+              <div class="signin-form-container">
+                <input class="input signin-input" type="text" id="signin" placeholder="email@example.com">
+                <label class="visually-hidden" for="signin">Логин</label>
+              </div>
+
+              <div class="signin-form-container">
+                <input class="input signin-input" type="password" id="password" value="пароль">
+                <label class="visually-hidden" for="password">Пароль</label>
+              </div>
+              <div class="signin-controls-container">
+                <button class="button special-index-button popover-signin-button">Войти</button>
+                <div class="login-container">
+                  <a class="link forgot-password-link" href="#">Забыли пароль?</a>
+                  <a class="link login-link" href="#">Регистрация</a>
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
         <button class="button user-nav-button car-button user-navigation-item" type="button">
+          <span class="visually-hidden">Корзина</span>
           <svg class="user-navigation-icon" aria-hidden="true" focusable="false" width="16" height="16"
             viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -59,6 +87,49 @@
           </svg>
           2 товара
         </button>
+        <div class="popover popover-car">
+          <div class="popover-content">
+            <h2 class="title popover-title">Корзина</h2>
+
+            <ul class="list cart-items-list">
+              <li class="cart-item raspberry-car-item">
+                <div class="car-order-container">
+                  <h3 class="title product-card-title popover-card-title">Малинка</h3>
+                  <p class="pharagraph car-order-description">1 кг х 310 ₽</p>
+                </div>
+                <b class="order-price car-order-price">310 ₽/кг</b>
+                <!-- <svg class="car-order-close-button" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12.803 4.13807C13.0634 3.87772 13.0634 3.45561 12.803 3.19526C12.5427 2.93491 12.1206 2.93491 11.8602 3.19526L7.99914 7.05633L4.13807 3.19526C3.87772 2.93491 3.45561 2.93491 3.19526 3.19526C2.93491 3.45561 2.93491 3.87772 3.19526 4.13807L7.05633 7.99914L3.19526 11.8602C2.93491 12.1206 2.93491 12.5427 3.19526 12.803C3.45561 13.0634 3.87772 13.0634 4.13807 12.803L7.99914 8.94195L11.8602 12.803C12.1206 13.0634 12.5427 13.0634 12.803 12.803C13.0634 12.5427 13.0634 12.1206 12.803 11.8602L8.94195 7.99914L12.803 4.13807Z"
+                    fill="#2D3440" />
+                </svg> -->
+              </li>
+
+              <li class="cart-item bubble-gum-car-item">
+                <div class="car-order-container">
+                  <h3 class="title product-card-title popover-card-title">Бабл-гам</h3>
+                  <p class="pharagraph car-order-description">1,5 кг х 320 ₽</p>
+                </div>
+                <b class="order-price car-order-price">480 ₽/кг</b>
+                <!-- <svg calss="car-order-close-button" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12.803 4.13807C13.0634 3.87772 13.0634 3.45561 12.803 3.19526C12.5427 2.93491 12.1206 2.93491 11.8602 3.19526L7.99914 7.05633L4.13807 3.19526C3.87772 2.93491 3.45561 2.93491 3.19526 3.19526C2.93491 3.45561 2.93491 3.87772 3.19526 4.13807L7.05633 7.99914L3.19526 11.8602C2.93491 12.1206 2.93491 12.5427 3.19526 12.803C3.45561 13.0634 3.87772 13.0634 4.13807 12.803L7.99914 8.94195L11.8602 12.803C12.1206 13.0634 12.5427 13.0634 12.803 12.803C13.0634 12.5427 13.0634 12.1206 12.803 11.8602L8.94195 7.99914L12.803 4.13807Z"
+                    fill="#2D3440" />
+                </svg> -->
+              </li>
+            </ul>
+            <div class="total">
+              <button class="button special-index-button">Оформить заказ</button>
+              <span class="car-total">Итого: 790 ₽</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="popover popover-car-empty">
+          <h2 class="title popover-title car-empty-title">Ваша корзина пока пуста</h2>
+        </div>
       </div>
     </nav>
   </header>
@@ -93,16 +164,16 @@
           </ul>
 
           <ul class="list slider-image-list">
-            <li class="slider-image-item active">
-              <img class="img slider-main-img" src="images/slider/strawberry-jam.png" width="306" height="507"
+            <li class="slider-image-item order-item-2">
+              <img class="img slider-img" src="images/slider/strawberry-jam.png" width="306" height="507"
                 alt="Мороженое с клубничным джемом, в вафельном рожке">
             </li>
-            <li class="slider-image-item">
+            <li class="slider-image-item order-item-3">
               <img class="img slider-img" src="images/slider/banana.png" width="306" height="507"
                 alt="Банановое мороженое, в вафельном рожке">
             </li>
-            <li class="slider-image-item">
-              <img class="img slider-img" src="images/slider/caramel-marshmallow.png" width="306" height="507"
+            <li class="slider-image-item active">
+              <img class="img slider-main-img" src="images/slider/caramel-marshmallow.png" width="306" height="507"
                 alt="Карамельное мороженое с маршмелой, украшеное мятой, в вафельном рожке">
             </li>
           </ul>
@@ -477,6 +548,39 @@
           href="https://htmlacademy.ru/">.html academy</a> © 2021</p>
     </div>
   </footer>
+
+  <div class="modal-container modal-container-close">
+    <div class="modal modal-feedback">
+
+      <button class="modal-close-button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+
+      <section class="modal-content">
+        <h2 class="modal-title visually-hidden">Форма обратной связи</h2>
+        <p class="pharagraph modal-pharagraph">Мы обязательно ответим вам!</p>
+
+        <form class="form feedback-form" action="https://echo.htmlacademy.ru/">
+          <p class="pharagraph feedback-form-group">
+            <input class="input feedback-input" type="text" id="name" placeholder="Имя и фамилия">
+            <label class="visually-hidden" for="name">Ваше имя</label>
+          </p>
+          <p class="pharagraph feedback-form-group">
+            <input class="input feedback-input" type="email" id="feedback-email" placeholder="email@example.com">
+            <label class="visually-hidden" for="feedback-email">Адрес электронной почты</label>
+          </p>
+          <p class="pharagraph feedback-form-group">
+            <textarea class="textarea input feedback-textarea" id="feedback-description"
+              placeholder="В свободной форме"></textarea>
+            <label class="visually-hidden" for="feedback-description">Содержание</label>
+          </p>
+
+          <button class="button feedback-button-modal special-index-button" type="button">Отправить</button>
+        </form>
+      </section>
+
+    </div>
+  </div>
 </body>
 
 
