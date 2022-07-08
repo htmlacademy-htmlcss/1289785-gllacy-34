@@ -18,9 +18,28 @@
             <img class="img logo-img" src="images/icons/logo.svg" width="137" height="56" alt="Логотип магазина Глейси">
           </a>
         </li>
-        <li class="navigation-item">
-          <a class="link navigation-link" href="catalog.html">Каталог</a>
+
+        <li class="navigation-item catalog-item">
+          <a class="link navigation-link catalog-link" href="catalog.html">Каталог</a>
+          <ul class="list popover catalog-menu-list">
+            <li class="catalog-menu-item new">
+              <a class="link catalog-menu-link new" href="#">Новинки</a>
+            </li>
+            <li class="catalog-menu-item active">
+              <a class="link catalog-menu-link" href="#">Сливочное</a>
+            </li>
+            <li class="catalog-menu-item">
+              <a class="link catalog-menu-link" href="#">Щербеты</a>
+            </li>
+            <li class="catalog-menu-item">
+              <a class="link catalog-menu-link" href="#">Фруктовый лед</a>
+            </li>
+            <li class="catalog-menu-item">
+              <a class="link catalog-menu-link" href="#">Мелорин</a>
+            </li>
+          </ul>
         </li>
+
         <li class="navigation-item">
           <a class="link navigation-link" href="#">Доставка и оплата</a>
         </li>
@@ -31,7 +50,7 @@
 
       <div class="user-navigation">
         <a class="link user-navigation-item phone-link" href="tel:+78005558628">+7 800 555-86-28</a>
-        <button class="button user-nav-button search-button user-navigation-item">
+        <button class="button user-nav-button search-button user-navigation-item" type="button">
           <svg class="user-navigation-icon search-icon" aria-hidden="true" focusable="false" width="14" height="14"
             viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -39,11 +58,16 @@
           </svg>
           <span class="visually-hidden">Поиск</span>
         </button>
-        <form class="form search-form" action="https://echo.htmlacademy.ru/">
-          <input class="input search-input" type="search" name="search" id="search">
-          <label class="visually-hidden" for="search">Поиск</label>
-        </form>
-        <button class="button user-nav-button login-button user-navigation-item" type="button">
+        <div class="search-form-container">
+          <form class="form search-form" action="https://echo.htmlacademy.ru/">
+            <input class="input search-input" type="search" name="search" id="search" placeholder="Поиск по сайту">
+            <label class="visually-hidden" for="search">Поиск</label>
+            <button class="search-close-button" type="button"></button>
+          </form>
+
+        </div>
+
+        <button class="button user-nav-button signin-button user-navigation-item" type="button">
           <svg class="user-navigation-icon" aria-hidden="true" focusable="false" width="16" height="16"
             viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -51,7 +75,33 @@
           </svg>
           Вход
         </button>
+        <div class="popover popover-signin">
+          <div class="popover-content">
+            <h2 class="title popover-title signin-title">Личный кабинет</h2>
+            <form class="form" action="https://echo.htmlacademy.ru/">
+              <div class="signin-form-container">
+                <input class="input signin-input" type="email" id="signin" placeholder="email@example.com">
+                <label class="visually-hidden" for="signin">Логин</label>
+              </div>
+
+              <div class="signin-form-container">
+                <input class="input signin-input" type="password" id="password" value="пароль">
+                <label class="visually-hidden" for="password">Пароль</label>
+              </div>
+              <div class="signin-controls-container">
+                <button class="button special-index-button popover-signin-button" type="button">Войти</button>
+                <div class="login-container">
+                  <a class="link forgot-password-link" href="#">Забыли пароль?</a>
+                  <a class="link login-link" href="#">Регистрация</a>
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
         <button class="button user-nav-button car-button user-navigation-item" type="button">
+          <span class="visually-hidden">Корзина</span>
           <svg class="user-navigation-icon" aria-hidden="true" focusable="false" width="16" height="16"
             viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -59,6 +109,44 @@
           </svg>
           2 товара
         </button>
+        <div class="popover popover-car">
+          <div class="popover-content">
+            <h2 class="title popover-title">Корзина</h2>
+
+            <ul class="list cart-items-list">
+              <li class="cart-item raspberry-car-item">
+                <div class="car-order-container">
+                  <h3 class="title product-card-title popover-card-title">Малинка</h3>
+                  <p class="pharagraph car-order-description">1 кг х 310 ₽</p>
+                </div>
+                <b class="order-price car-order-price">310 ₽/кг</b>
+                <button class="remove-from-car-button" type="button">
+                  <span class="visually-hidden">Закрыть</span>
+                </button>
+              </li>
+
+              <li class="cart-item bubble-gum-car-item">
+                <div class="car-order-container">
+                  <h3 class="title product-card-title popover-card-title">Бабл-гам</h3>
+                  <p class="pharagraph car-order-description">1,5 кг х 320 ₽</p>
+                </div>
+                <b class="order-price car-order-price">480 ₽/кг</b>
+                <button class="remove-from-car-button" type="button">
+                  <span class="visually-hidden">Закрыть</span>
+                </button>
+              </li>
+            </ul>
+            <div class="total">
+              <a class="link button special-index-button" href="#">Оформить заказ</a>
+              <span class="car-total">Итого: 790 ₽</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="popover popover-car-empty">
+          <h2 class="title popover-title car-empty-title">Ваша корзина пока пуста</h2>
+        </div>
+
       </div>
     </nav>
   </header>
@@ -93,16 +181,16 @@
           </ul>
 
           <ul class="list slider-image-list">
-            <li class="slider-image-item active">
-              <img class="img slider-main-img" src="images/slider/strawberry-jam.png" width="306" height="507"
+            <li class="slider-image-item order-item-2">
+              <img class="img slider-img" src="images/slider/strawberry-jam.png" width="306" height="507"
                 alt="Мороженое с клубничным джемом, в вафельном рожке">
             </li>
-            <li class="slider-image-item">
+            <li class="slider-image-item order-item-3">
               <img class="img slider-img" src="images/slider/banana.png" width="306" height="507"
                 alt="Банановое мороженое, в вафельном рожке">
             </li>
-            <li class="slider-image-item">
-              <img class="img slider-img" src="images/slider/caramel-marshmallow.png" width="306" height="507"
+            <li class="slider-image-item active">
+              <img class="img slider-main-img" src="images/slider/caramel-marshmallow.png" width="306" height="507"
                 alt="Карамельное мороженое с маршмелой, украшеное мятой, в вафельном рожке">
             </li>
           </ul>
@@ -364,23 +452,28 @@
           <form class="form delivery-form" action="https://echo.htmlacademy.ru/" method="post">
             <p class="pharagraph delivery-pharagraph delivery-form-date">
               <label class="label delivery-label delivery-date-label" for="date">Дата
-                <a class="delivery-info-button date-delivery-info" href="#">
-                  <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-                </a>
+                <button class="tooltip delivery-info-button" aria-labelledby="tooltip-data-label">
+                  <span class="tooltip-text data-tooltip" role="tooltip" id="tooltip-data-label">Введите желаемую дату
+                    доставки</span>
+                </button>
               </label>
               <input class="input delivery-input delivery-date-input" type="text" name="delivery-date" id="date"
                 placeholder="01.04.2020" required>
             </p>
+
             <p class="pharagraph delivery-pharagraph delivery-form-phone">
               <label class="label delivery-label delivery-phone-label" for="phone">Телефон</label>
               <input class="input delivery-input delivery-phone-input" type="tel" name="delivery-phone" id="phone"
                 placeholder="+7 800 999-00-00" required>
             </p>
+
             <p class="pharagraph delivery-pharagraph delivery-form-address">
               <label class="label delivery-label delivery-address-label" for="address">Адрес
-                <a class="delivery-info-button address-delivery-info" href="#">
-                  <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-                </a>
+                <button class="tooltip delivery-info-button" aria-labelledby="tooltip-address-label">
+                  <span class="tooltip-text address-tooltip" role="tooltip" id="tooltip-address-label">Введите название
+                    улицы, дома и
+                    квартиры</span>
+                </button>
               </label>
               <input class="input delivery-input delivery-address-input" type="text" name="delivery-address"
                 id="address" placeholder="ул. Большая Конюшенная, 19/8" required>
@@ -477,6 +570,39 @@
           href="https://htmlacademy.ru/">.html academy</a> © 2021</p>
     </div>
   </footer>
+
+  <div class="modal-container modal-container-close">
+    <div class="modal modal-feedback">
+
+      <button class="modal-close-button" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+
+      <section class="modal-content">
+        <h2 class="modal-title visually-hidden">Форма обратной связи</h2>
+        <p class="pharagraph modal-pharagraph">Мы обязательно ответим вам!</p>
+
+        <form class="form feedback-form" action="https://echo.htmlacademy.ru/">
+          <p class="pharagraph feedback-form-group">
+            <input class="input feedback-input" type="text" id="name" placeholder="Имя и фамилия">
+            <label class="visually-hidden" for="name">Ваше имя</label>
+          </p>
+          <p class="pharagraph feedback-form-group">
+            <input class="input feedback-input" type="email" id="feedback-email" placeholder="email@example.com">
+            <label class="visually-hidden" for="feedback-email">Адрес электронной почты</label>
+          </p>
+          <p class="pharagraph feedback-form-group">
+            <textarea class="textarea input feedback-textarea" id="feedback-description"
+              placeholder="В свободной форме"></textarea>
+            <label class="visually-hidden" for="feedback-description">Содержание</label>
+          </p>
+
+          <button class="button feedback-button-modal special-index-button" type="button">Отправить</button>
+        </form>
+      </section>
+
+    </div>
+  </div>
 </body>
 
 
