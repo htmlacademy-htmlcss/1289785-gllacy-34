@@ -18,9 +18,28 @@
             <img class="img logo-img" src="images/icons/logo.svg" width="137" height="56" alt="Логотип магазина Глейси">
           </a>
         </li>
-        <li class="navigation-item">
+
+        <li class="navigation-item catalog-item">
           <a class="link navigation-link catalog-link" href="catalog.html">Каталог</a>
+          <ul class="list popover catalog-menu-list">
+            <li class="catalog-menu-item new">
+              <a class="link catalog-menu-link new" href="#">Новинки</a>
+            </li>
+            <li class="catalog-menu-item active">
+              <a class="link catalog-menu-link" href="#">Сливочное</a>
+            </li>
+            <li class="catalog-menu-item">
+              <a class="link catalog-menu-link" href="#">Щербеты</a>
+            </li>
+            <li class="catalog-menu-item">
+              <a class="link catalog-menu-link" href="#">Фруктовый лед</a>
+            </li>
+            <li class="catalog-menu-item">
+              <a class="link catalog-menu-link" href="#">Мелорин</a>
+            </li>
+          </ul>
         </li>
+
         <li class="navigation-item">
           <a class="link navigation-link" href="#">Доставка и оплата</a>
         </li>
@@ -31,19 +50,21 @@
 
       <div class="user-navigation">
         <a class="link user-navigation-item phone-link" href="tel:+78005558628">+7 800 555-86-28</a>
-        <button class="button user-nav-button search-button user-navigation-item">
+        <button class="button user-nav-button search-button user-navigation-item" type="button">
           <svg class="user-navigation-icon search-icon" aria-hidden="true" focusable="false" width="14" height="14"
             viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
               d="M1.66329 6.18799C1.66329 3.61066 3.75263 1.52132 6.32996 1.52132C8.90729 1.52132 10.9966 3.61066 10.9966 6.18799C10.9966 7.44526 10.4994 8.58641 9.69093 9.42554C9.66808 9.44309 9.64612 9.46234 9.62519 9.48326C9.60427 9.50418 9.58503 9.52614 9.56748 9.54898C8.72835 10.3575 7.58722 10.8547 6.32996 10.8547C3.75263 10.8547 1.66329 8.76532 1.66329 6.18799ZM10.0751 10.8759C9.04862 11.697 7.74662 12.188 6.32996 12.188C3.01625 12.188 0.329956 9.5017 0.329956 6.18799C0.329956 2.87428 3.01625 0.187988 6.32996 0.187988C9.64367 0.187988 12.33 2.87428 12.33 6.18799C12.33 7.60467 11.839 8.90668 11.0179 9.93313L13.468 12.3833C13.7284 12.6436 13.7284 13.0657 13.468 13.3261C13.2077 13.5864 12.7855 13.5864 12.5252 13.3261L10.0751 10.8759Z" />
           </svg>
-          <!-- <span class="visually-hidden">Поиск</span> -->
+          <span class="visually-hidden">Поиск</span>
         </button>
         <div class="search-form-container">
           <form class="form search-form" action="https://echo.htmlacademy.ru/">
             <input class="input search-input" type="search" name="search" id="search" placeholder="Поиск по сайту">
             <label class="visually-hidden" for="search">Поиск</label>
+            <button class="search-close-button" type="button"></button>
           </form>
+
         </div>
 
         <button class="button user-nav-button signin-button user-navigation-item" type="button">
@@ -59,7 +80,7 @@
             <h2 class="title popover-title signin-title">Личный кабинет</h2>
             <form class="form" action="https://echo.htmlacademy.ru/">
               <div class="signin-form-container">
-                <input class="input signin-input" type="text" id="signin" placeholder="email@example.com">
+                <input class="input signin-input" type="email" id="signin" placeholder="email@example.com">
                 <label class="visually-hidden" for="signin">Логин</label>
               </div>
 
@@ -68,7 +89,7 @@
                 <label class="visually-hidden" for="password">Пароль</label>
               </div>
               <div class="signin-controls-container">
-                <button class="button special-index-button popover-signin-button">Войти</button>
+                <button class="button special-index-button popover-signin-button" type="button">Войти</button>
                 <div class="login-container">
                   <a class="link forgot-password-link" href="#">Забыли пароль?</a>
                   <a class="link login-link" href="#">Регистрация</a>
@@ -78,6 +99,7 @@
             </form>
           </div>
         </div>
+
         <button class="button user-nav-button car-button user-navigation-item" type="button">
           <span class="visually-hidden">Корзина</span>
           <svg class="user-navigation-icon" aria-hidden="true" focusable="false" width="16" height="16"
@@ -98,12 +120,9 @@
                   <p class="pharagraph car-order-description">1 кг х 310 ₽</p>
                 </div>
                 <b class="order-price car-order-price">310 ₽/кг</b>
-                <!-- <svg class="car-order-close-button" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M12.803 4.13807C13.0634 3.87772 13.0634 3.45561 12.803 3.19526C12.5427 2.93491 12.1206 2.93491 11.8602 3.19526L7.99914 7.05633L4.13807 3.19526C3.87772 2.93491 3.45561 2.93491 3.19526 3.19526C2.93491 3.45561 2.93491 3.87772 3.19526 4.13807L7.05633 7.99914L3.19526 11.8602C2.93491 12.1206 2.93491 12.5427 3.19526 12.803C3.45561 13.0634 3.87772 13.0634 4.13807 12.803L7.99914 8.94195L11.8602 12.803C12.1206 13.0634 12.5427 13.0634 12.803 12.803C13.0634 12.5427 13.0634 12.1206 12.803 11.8602L8.94195 7.99914L12.803 4.13807Z"
-                    fill="#2D3440" />
-                </svg> -->
+                <button class="remove-from-car-button" type="button">
+                  <span class="visually-hidden">Закрыть</span>
+                </button>
               </li>
 
               <li class="cart-item bubble-gum-car-item">
@@ -112,16 +131,13 @@
                   <p class="pharagraph car-order-description">1,5 кг х 320 ₽</p>
                 </div>
                 <b class="order-price car-order-price">480 ₽/кг</b>
-                <!-- <svg calss="car-order-close-button" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M12.803 4.13807C13.0634 3.87772 13.0634 3.45561 12.803 3.19526C12.5427 2.93491 12.1206 2.93491 11.8602 3.19526L7.99914 7.05633L4.13807 3.19526C3.87772 2.93491 3.45561 2.93491 3.19526 3.19526C2.93491 3.45561 2.93491 3.87772 3.19526 4.13807L7.05633 7.99914L3.19526 11.8602C2.93491 12.1206 2.93491 12.5427 3.19526 12.803C3.45561 13.0634 3.87772 13.0634 4.13807 12.803L7.99914 8.94195L11.8602 12.803C12.1206 13.0634 12.5427 13.0634 12.803 12.803C13.0634 12.5427 13.0634 12.1206 12.803 11.8602L8.94195 7.99914L12.803 4.13807Z"
-                    fill="#2D3440" />
-                </svg> -->
+                <button class="remove-from-car-button" type="button">
+                  <span class="visually-hidden">Закрыть</span>
+                </button>
               </li>
             </ul>
             <div class="total">
-              <button class="button special-index-button">Оформить заказ</button>
+              <a class="link button special-index-button" href="#">Оформить заказ</a>
               <span class="car-total">Итого: 790 ₽</span>
             </div>
           </div>
@@ -130,6 +146,7 @@
         <div class="popover popover-car-empty">
           <h2 class="title popover-title car-empty-title">Ваша корзина пока пуста</h2>
         </div>
+
       </div>
     </nav>
   </header>
@@ -435,23 +452,28 @@
           <form class="form delivery-form" action="https://echo.htmlacademy.ru/" method="post">
             <p class="pharagraph delivery-pharagraph delivery-form-date">
               <label class="label delivery-label delivery-date-label" for="date">Дата
-                <a class="delivery-info-button date-delivery-info" href="#">
-                  <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-                </a>
+                <button class="tooltip delivery-info-button" aria-labelledby="tooltip-data-label">
+                  <span class="tooltip-text data-tooltip" role="tooltip" id="tooltip-data-label">Введите желаемую дату
+                    доставки</span>
+                </button>
               </label>
               <input class="input delivery-input delivery-date-input" type="text" name="delivery-date" id="date"
                 placeholder="01.04.2020" required>
             </p>
+
             <p class="pharagraph delivery-pharagraph delivery-form-phone">
               <label class="label delivery-label delivery-phone-label" for="phone">Телефон</label>
               <input class="input delivery-input delivery-phone-input" type="tel" name="delivery-phone" id="phone"
                 placeholder="+7 800 999-00-00" required>
             </p>
+
             <p class="pharagraph delivery-pharagraph delivery-form-address">
               <label class="label delivery-label delivery-address-label" for="address">Адрес
-                <a class="delivery-info-button address-delivery-info" href="#">
-                  <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-                </a>
+                <button class="tooltip delivery-info-button" aria-labelledby="tooltip-address-label">
+                  <span class="tooltip-text address-tooltip" role="tooltip" id="tooltip-address-label">Введите название
+                    улицы, дома и
+                    квартиры</span>
+                </button>
               </label>
               <input class="input delivery-input delivery-address-input" type="text" name="delivery-address"
                 id="address" placeholder="ул. Большая Конюшенная, 19/8" required>
@@ -552,7 +574,7 @@
   <div class="modal-container modal-container-close">
     <div class="modal modal-feedback">
 
-      <button class="modal-close-button">
+      <button class="modal-close-button" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
 
