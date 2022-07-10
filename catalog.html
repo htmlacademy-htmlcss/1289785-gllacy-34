@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Магазин мороженного "Глейси": каталог</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/images/favicons/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -61,7 +63,9 @@
           <form class="form search-form" action="https://echo.htmlacademy.ru/">
             <input class="input search-input" type="search" name="search" id="search" placeholder="Поиск по сайту">
             <label class="visually-hidden" for="search">Поиск</label>
-            <button class="search-close-button" type="button"></button>
+            <button class="search-close-button" type="button">
+              <span class="visually-hidden">Очистить поле</span>
+            </button>
           </form>
 
         </div>
@@ -88,7 +92,7 @@
                 <label class="visually-hidden" for="password">Пароль</label>
               </div>
               <div class="signin-controls-container">
-                <button class="button special-index-button popover-signin-button" type="button">Войти</button>
+                <button class="button special-index-button popover-signin-button" type="submit">Войти</button>
                 <div class="login-container">
                   <a class="link forgot-password-link" href="#">Забыли пароль?</a>
                   <a class="link login-link" href="#">Регистрация</a>
@@ -208,7 +212,6 @@
                 </div>
               </div>
             </fieldset>
-
 
             <fieldset class="catalog-filter-fieldset catalog-filter-group fat-content-filter">
               <legend class="legend catalog-legend catalog-filter-title">Жирность:</legend>
@@ -632,17 +635,7 @@
           <span class="visually-hidden">Telegram</span>
         </a>
       </li>
-      <li class="social-item">
-        <a class="link social-link social-link-youtube" href="https://www.youtube.com/user/htmlacademyru"
-          aria-label="Переход на страницу магазина «Глейси» в YouTube">
-          <svg class="social-icon social-icon-youtube" aria-hidden="true" focusable="false" width="24" height="24"
-            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="m14.004 11.791-2.808-1.31c-.245-.114-.446.014-.446.285v2.468c0 .271.201.399.446.285l2.806-1.31c.247-.115.247-.303.002-.418ZM12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0Zm0 16.875c-6.143 0-6.25-.554-6.25-4.875S5.857 7.125 12 7.125c6.142 0 6.25.554 6.25 4.875s-.108 4.875-6.25 4.875Z" />
-          </svg>
-          <span class="visually-hidden">YouTube</span>
-        </a>
-      </li>
+
       <li class="social-item">
         <a class="link social-link social-link-vk" href="https://vk.com/htmlacademy"
           aria-label="Переход на страницу магазина «Глейси» в Vkontakte">
@@ -652,6 +645,17 @@
               d="M24 12c0 6.627-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0s12 5.373 12 12Zm-11.412 2.975h-.717s-1.582.083-2.976-1.188c-1.52-1.388-2.863-4.14-2.863-4.14s-.077-.18.007-.268c.095-.098.352-.104.352-.104l1.715-.01s.161.024.277.098c.095.062.149.176.149.176s.277.615.644 1.17c.716 1.085 1.05 1.322 1.293 1.206.354-.17.248-1.533.248-1.533s.007-.496-.178-.716c-.143-.17-.414-.22-.533-.235-.096-.011.062-.207.267-.295.309-.133.854-.14 1.498-.135.501.005.645.032.842.074.455.096.44.405.41 1.07-.01.2-.02.43-.02.697 0 .06-.002.124-.004.19-.01.34-.023.73.233.876.132.074.453.011 1.256-1.185.381-.566.667-1.233.667-1.233s.062-.119.16-.17c.098-.051.232-.036.232-.036l1.805-.01s.542-.056.63.158c.091.226-.203.751-.94 1.612-.696.813-1.036 1.115-1.01 1.38.02.196.242.372.67.72.888.722 1.124 1.101 1.18 1.192a.447.447 0 0 0 .011.016c.398.578-.44.623-.44.623l-1.603.02s-.345.06-.798-.214c-.237-.142-.469-.375-.69-.597-.337-.339-.649-.652-.915-.578-.447.124-.433.967-.433.967s.004.18-.098.277c-.11.104-.328.125-.328.125Z" />
           </svg>
           <span class="visually-hidden">Vkontakte</span>
+        </a>
+      </li>
+      <li class="social-item">
+        <a class="link social-link social-link-youtube" href="https://www.youtube.com/user/htmlacademyru"
+          aria-label="Переход на страницу магазина «Глейси» в YouTube">
+          <svg class="social-icon social-icon-youtube" aria-hidden="true" focusable="false" width="24" height="24"
+            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m14.004 11.791-2.808-1.31c-.245-.114-.446.014-.446.285v2.468c0 .271.201.399.446.285l2.806-1.31c.247-.115.247-.303.002-.418ZM12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0Zm0 16.875c-6.143 0-6.25-.554-6.25-4.875S5.857 7.125 12 7.125c6.142 0 6.25.554 6.25 4.875s-.108 4.875-6.25 4.875Z" />
+          </svg>
+          <span class="visually-hidden">YouTube</span>
         </a>
       </li>
     </ul>
@@ -678,10 +682,11 @@
         <img class="img copyright-img" src="images/icons/logo-htmlacademy.svg" width="93" height="27"
           alt="Перейти на сайт htmlacademy">
       </a>
-      <p class="pharagraph copyright-pharagraph">Сделано в <a class="link copyright-owner-link disabled"
+      <p class="pharagraph copyright-pharagraph">Сделано в <a class="link copyright-owner-link"
           href="https://htmlacademy.ru/">.html academy</a> © 2021</p>
     </div>
   </footer>
+
 </body>
 
 
