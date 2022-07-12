@@ -1426,19 +1426,6 @@ body.slider-body-3 {
   cursor: pointer;
 }
 
-.control:hover .radio-control-mark,
-.control-catalog-input:checked:active + .radio-control-mark,
-.control-catalog-input:checked:focus + .radio-control-mark,
-.control-catalog-input:active + .radio-control-mark,
-.control-catalog-input:focus + .radio-control-mark {
-  border-color: var(--extra-light-white);
-}
-
-
-.control-catalog-input:disabled + .radio-control-mark {
-  border-color: var(--extra-dark-gray-transparent);
-}
-
 .control-catalog-input:checked + .radio-control-mark::before {
   content: "";
   position: absolute;
@@ -1450,14 +1437,39 @@ body.slider-body-3 {
   background: var(--extra-dark-gray);
 }
 
-.control-catalog-input:checked:hover + .radio-control-mark::before,
-.control-catalog-input:checked:active + .radio-control-mark::before,
-.control-catalog-input:checked:focus + .radio-control-mark::before {
+/* Стили для конопки radio при hover, active и focus */
+.control-catalog-input[type="radio"]:hover + .radio-control-mark,
+.control-catalog-input[type="radio"]:focus + .radio-control-mark,
+.control-catalog-input[type="radio"]:active + .radio-control-mark {
+  border-color: var(--extra-light-white);
+}
+
+.control-catalog-input[type="radio"]:hover + .radio-control-mark::before,
+.control-catalog-input[type="radio"]:active + .radio-control-mark::before,
+.control-catalog-input[type="radio"]:focus + .radio-control-mark::before {
   background: var(--extra-light-white);
+}
+
+/* Стили для кнопки radio в состоянии disabled */
+.control-catalog-input:disabled + .radio-control-mark {
+  border-color: var(--extra-dark-gray-transparent);
 }
 
 .control-catalog-input:checked:disabled + .radio-control-mark::before {
   background: var(--extra-dark-gray-transparent);
+}
+
+/* Стили для невыбранной кнопки checkbox при  hover, active и focus*/
+.control-catalog-input[type="checkbox"]:not(:checked):hover + .checkbox-control-mark > .checkbox-icon,
+.control-catalog-input[type="checkbox"]:not(:checked):active +  .checkbox-control-mark > .checkbox-icon,
+.control-catalog-input[type="checkbox"]:not(:checked):focus + .checkbox-control-mark > .checkbox-icon {
+  fill: var(--extra-light-white);
+}
+
+.control-catalog-input[type="checkbox"]:checked:hover + .checkbox-control-mark > .checkbox-checked-icon,
+.control-catalog-input[type="checkbox"]:checked:active + .checkbox-control-mark > .checkbox-checked-icon,
+.control-catalog-input[type="checkbox"]:checked:focus + .checkbox-control-mark > .checkbox-checked-icon {
+  fill: var(--extra-light-white);
 }
 
 .checkbox-control-mark > .checkbox-icon ,
@@ -1467,23 +1479,16 @@ body.slider-body-3 {
   left: 0;
 }
 
-.control-checkbox {
-  cursor: pointer;
-}
-
-.control:hover .checkbox-control-mark > .checkbox-icon {
-  fill: var(--extra-light-white);
-}
-
-.control:active .checkbox-control-mark > .checkbox-icon,
-.control:focus .checkbox-control-mark > .checkbox-icon {
-  fill: var(--extra-light-white);
-}
-
+/* Стили для кнопки checkbox в состоянии disabled */
 .control-catalog-input:disabled + .checkbox-control-mark > .checkbox-icon {
   fill: var(--extra-dark-gray-transparent);
 }
 
+.control-catalog-input:checked:disabled + .checkbox-control-mark > .checkbox-checked-icon {
+  fill: var(--extra-dark-gray-transparent);
+}
+
+/* Стили для смены иконки checkbox с checked на not checked */
 .control-catalog-input:checked + .checkbox-control-mark > .checkbox-icon {
   fill: none;
 }
@@ -1492,21 +1497,8 @@ body.slider-body-3 {
   fill: none;
 }
 
-.control-catalog-input:checked + .checkbox-control-mark > .checkbox-checked-icon {
-  fill: var(--extra-dark-gray);
-}
-
-.control-catalog-input:checked:active + .checkbox-control-mark > .checkbox-checked-icon,
-.control-catalog-input:checked:focus + .checkbox-control-mark > .checkbox-checked-icon {
-  fill: var(--extra-light-white);
-}
-
-.control-catalog-input:checked:hover + .checkbox-control-mark > .checkbox-checked-icon {
-  fill: var(--extra-light-white);
-}
-
-.control-catalog-input:checked:disabled + .checkbox-control-mark > .checkbox-checked-icon {
-  fill: var(--extra-dark-gray-transparent);
+.control-checkbox {
+  cursor: pointer;
 }
 
 .catalog-filter-fieldset {
