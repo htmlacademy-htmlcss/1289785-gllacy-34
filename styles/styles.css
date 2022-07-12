@@ -641,7 +641,6 @@ h2.car-empty-title {
   justify-content: end;
 
   width: 435px;
-  /* margin-left: auto; */
 }
 
 .user-navigation-item:not(:nth-last-child(3)) {
@@ -997,7 +996,6 @@ h2.car-empty-title {
 }
 
 b.car-order-price {
-  /* margin-right: 52px; */
   font-size: 18px;
   line-height: 22px;
 }
@@ -1862,7 +1860,6 @@ body.slider-body-3 {
   display: grid;
   grid-template-columns: repeat(2, 570px);
   gap: 30px;
-  /* grid-template-rows: 224px; */
   margin-bottom: 80px;
 }
 
