@@ -230,7 +230,7 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../images/icons/spinner-dark.svg");
+  background-image: url("../img/icons/spinner-dark.svg");
   }
 
 .regular-button:hover {
@@ -279,7 +279,7 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../images/icons/spinner-light.svg");
+  background-image: url("../img/icons/spinner-light.svg");
 }
 
 .special-index-button:hover {
@@ -692,7 +692,7 @@ h2.car-empty-title {
 
   background: none;
   border: none;
-  background-image: url("../images/icons/cross-search.svg");
+  background-image: url("../img/icons/cross-search.svg");
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -931,7 +931,7 @@ h2.car-empty-title {
   right: 2px;
   width: 16px;
   height: 16px;
-  background-image: url("../images/icons/cross.svg");
+  background-image: url("../img/icons/cross.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -970,7 +970,7 @@ h2.car-empty-title {
   left: 0;
   width: 46px;
   height: 46px;
-  background-image: url("../images/ice-cream/raspberry.jpg");
+  background-image: url("../img/ice-cream/raspberry.jpg");
   background-size: 46px 46px;
 }
 
@@ -981,7 +981,7 @@ h2.car-empty-title {
   left: 0;
   width: 46px;
   height: 46px;
-  background-image: url("../images/ice-cream/bubble-gum.jpg");
+  background-image: url("../img/ice-cream/bubble-gum.jpg");
   background-size: 46px 46px;
 }
 
@@ -1040,7 +1040,7 @@ b.car-order-price {
   right: -20px;
   width: 12px;
   height: 12px;
-  background-image: url("../images/icons/breadcrumbs-icon.svg");
+  background-image: url("../img/icons/breadcrumbs-icon.svg");
   background-repeat: no-repeat;
 }
 
@@ -1337,14 +1337,14 @@ body.slider-body-3 {
 }
 
 .special-offer-raspberry {
-  background-image: url("../images/sale/raspberry.png");
+  background-image: url("../img/sale/raspberry.png");
   background-repeat: no-repeat;
   background-size: 219px 268px;
   background-position: right;
 }
 
 .special-offer-marshmallow {
-  background-image: url("../images/sale/marshmallow.png");
+  background-image: url("../img/sale/marshmallow.png");
   background-repeat: no-repeat;
   background-size: 219px 268px;
   background-position: right;
@@ -1541,7 +1541,7 @@ body.slider-body-3 {
   background: none;
   border: none;
   border-radius: 20px;
-  background-image: url("../images/icons/select-arrow.svg");
+  background-image: url("../img/icons/select-arrow.svg");
   background-repeat: no-repeat;
   background-position: right 16px center;
   appearance: none;
@@ -1788,7 +1788,7 @@ body.slider-body-3 {
   margin-bottom: 82px;
 
   border-radius: 16px;
-  background-image: url("../images/backgrounds/waffle.jpg");
+  background-image: url("../img/backgrounds/waffle.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1831,19 +1831,19 @@ body.slider-body-3 {
 }
 
 .about-item--ice-cream::before {
-  background-image: url("../images/icons/ice-cream.svg");
+  background-image: url("../img/icons/ice-cream.svg");
 }
 
 .about-item--leaf::before {
-  background-image: url("../images/icons/leaf.svg");
+  background-image: url("../img/icons/leaf.svg");
 }
 
 .about-item--cow::before {
-  background-image: url("../images/icons/cow.svg");
+  background-image: url("../img/icons/cow.svg");
 }
 
 .about-item--thermometer::before {
-  background-image: url("../images/icons/thermometer.svg");
+  background-image: url("../img/icons/thermometer.svg");
 }
 
 /* Articles */
@@ -1862,7 +1862,7 @@ body.slider-body-3 {
   padding: 34px 32px;
   border-radius: 16px;
   background-color: var(--white);
-  background-image: url("../images/backgrounds/news.jpg");
+  background-image: url("../img/backgrounds/news.jpg");
   background-size: cover;
 }
 
@@ -1881,7 +1881,7 @@ body.slider-body-3 {
 
   border-radius: 16px;
   background-color: var(--white);
-  background-image: url("../images/backgrounds/subscription.jpg");
+  background-image: url("../img/backgrounds/subscription.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1926,7 +1926,7 @@ body.slider-body-3 {
 
   border-radius: 16px;
   background-color: var(--white);
-  background-image: url("../images/backgrounds/delivery.jpg");
+  background-image: url("../img/backgrounds/delivery.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -2012,7 +2012,7 @@ label.delivery-label {
   left: 0;
   width: 14px;
   height: 14px;
-  background-image: url("../images/icons/info.svg");
+  background-image: url("../img/icons/info.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -2073,7 +2073,7 @@ label.delivery-label {
 
   border-radius: 16px;
   background: var(--extra-light-white);
-  background-image: url("../images/backgrounds/feedback.jpg");
+  background-image: url("../img/backgrounds/feedback.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2176,7 +2176,7 @@ label.delivery-label {
   right: 0;
   width: 16px;
   height: 16px;
-  background-image: url("../images/icons/pagination-arrow-right.svg");
+  background-image: url("../img/icons/pagination-arrow-right.svg");
   background-repeat: no-repeat;
 }
 
@@ -2187,7 +2187,7 @@ label.delivery-label {
   left: 0;
   width: 16px;
   height: 16px;
-  background-image: url("../images/icons/pagination-arrow-left.svg");
+  background-image: url("../img/icons/pagination-arrow-left.svg");
   background-repeat: no-repeat;
 }
 
@@ -2306,7 +2306,7 @@ label.delivery-label {
   left: 14px;
   width: 16px;
   height: 16px;
-  background-image: url("../images/icons/heart.svg");
+  background-image: url("../img/icons/heart.svg");
   background-repeat: no-repeat;
 }
 
@@ -2395,7 +2395,7 @@ label.delivery-label {
   height: 20px;
   border: none;
   background-color: var(--extra-light-white);
-  background-image: url("../images/icons/cross.svg");
+  background-image: url("../img/icons/cross.svg");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
