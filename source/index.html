@@ -4,8 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>Магазин мороженного "Глейси"</title>
-  <link rel="icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" href="/img/favicons/favicon-32x32.png">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-favicon-180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -15,7 +17,6 @@
 
     <!-- Навигация -->
     <nav class="site-navigation">
-
       <!-- Навигация сайта -->
       <ul class="list navigation-list">
         <li class="navigation-item logo-navigation-item">
@@ -170,20 +171,20 @@
         <h2 class="title section-title visually-hidden">Галерея</h2>
         <div class="slider-container">
           <ul class="list slider-description-list">
-            <li class="slider-description-item active">
+            <li class="slider-description-item first-slid-description active">
               <h3 class="title slider-title">Нежный пломбир<br>
                 с клубничным джемом</h3>
               <p class="pharagraph slider-pharagraph">Натуральное мороженое из свежих сливок<br>
                 и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
               <a class="link button slider-order-button regular-button" href="#">Заказать</a>
             </li>
-            <li class="slider-description-item ">
+            <li class="slider-description-item second-slid-description">
               <h3 class="title slider-title">Сливочное мороженое со вкусом банана</h3>
               <p class="pharagraph slider-pharagraph">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть
                 и наслаждение даже в самый жаркий летний день.</p>
               <a class="link button slider-order-button regular-button" href="#">Заказать</a>
             </li>
-            <li class="slider-description-item">
+            <li class="slider-description-item third-slid-description">
               <h3 class="title slider-title">Карамельный пломбир<br>
                 с маршмеллоу</h3>
               <p class="pharagraph slider-pharagraph">Необычный сладкий десерт с карамельным топпингом и кусочками
@@ -197,12 +198,12 @@
                 alt="Мороженое с клубничным джемом, в вафельном рожке.">
             </li>
             <li class="slider-image-item order-item-2">
-              <img class="img slider-img" src="img/slider/banana.png" width="306" height="507"
+              <img class="img slider-img second-slider-img" src="img/slider/banana.png" width="306" height="507"
                 alt="Банановое мороженое, в вафельном рожке.">
             </li>
             <li class="slider-image-item order-item-3">
-              <img class="img slider-img" src="img/slider/caramel-marshmallow.png" width="306" height="507"
-                alt="Карамельное мороженое с маршмелой, украшеное мятой, в вафельном рожке.">
+              <img class="img slider-img third-slider-img" src="img/slider/caramel-marshmallow.png" width="306"
+                height="507" alt="Карамельное мороженое с маршмелой, украшеное мятой, в вафельном рожке.">
             </li>
           </ul>
 
@@ -226,21 +227,22 @@
             </button>
           </div>
         </div>
-
         <div class="slider-controls">
+          <!-- Пагинация к слайдеру -->
           <ol class="list slider-pagination">
             <li class="slider-pagination-item">
-              <button class="slider-pagination-button slider-pagination-button-current" type="button">
+              <button class="slider-pagination-button first-slider-button slider-pagination-button-current"
+                type="button">
                 <span class="visually-hidden">Первый слайд.</span>
               </button>
             </li>
             <li class="slider-pagination-item">
-              <button class="slider-pagination-button" type="button">
+              <button class="slider-pagination-button second-slider-button" type="button">
                 <span class="visually-hidden">Второй слайд.</span>
               </button>
             </li>
             <li class="slider-pagination-item">
-              <button class="slider-pagination-button" type="button">
+              <button class="slider-pagination-button third-slider-button" type="button">
                 <span class="visually-hidden">Третий слайд.</span>
               </button>
             </li>
@@ -628,6 +630,7 @@
       </section>
     </div>
   </div>
+  <script src="js/script.min.js" type="module"></script>
 </body>
 
 

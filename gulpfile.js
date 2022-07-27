@@ -38,16 +38,16 @@ const html = () => {
 
 // Scripts
 
-// const scripts = () => {
-//   return gulp
-//     .src("source/js/script.js")
-//     .pipe(terser())
-//     .pipe(rename("script.min.js"))
-//     .pipe(gulp.dest("build/js"))
-//     .pipe(sync.stream());
-// };
+const scripts = () => {
+  return gulp
+    .src("source/js/main.js")
+    .pipe(terser())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+};
 
-// exports.scripts = scripts;
+exports.scripts = scripts;
 
 // Images
 
@@ -121,6 +121,7 @@ const reload = (done) => {
 const watcher = () => {
   gulp.watch("source/styles/styles.css", gulp.series(styles));
   gulp.watch("source/*.html", gulp.series(html, reload));
+  gulp.watch("source/js/main.js", gulp.series(scripts));
 };
 
 // Build
@@ -129,7 +130,7 @@ const build = gulp.series(
   clean,
   copy,
   optimizeImages,
-  gulp.parallel(styles, html)
+  gulp.parallel(styles, scripts, html)
 );
 
 exports.build = build;
@@ -140,6 +141,6 @@ exports.default = gulp.series(
   clean,
   copy,
   copyImages,
-  gulp.parallel(styles, html),
+  gulp.parallel(styles, scripts, html),
   gulp.series(server, watcher)
 );
